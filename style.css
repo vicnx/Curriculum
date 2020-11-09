@@ -52,7 +52,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-color: red;
 }
 .sobremi__der{
@@ -62,4 +61,35 @@ body{
     border-radius: 50%;
     width: 200px;
     height: auto;
+}
+.sobremi__izq__iconos{
+    text-decoration: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.sobremi__izq__iconos__icono{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sobremi__izq__iconos__icono{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.sobremi__izq__iconos__icono span{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
 }

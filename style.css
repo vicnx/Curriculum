@@ -1,6 +1,8 @@
 body{
     font-family: monospace;
     margin: unset;
+    box-sizing: border-box;
+
 }
 /* HEADER */
 .header{
@@ -39,8 +41,32 @@ body{
 }
 
 /* SOBRE MI */
-
 .sobremi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.sobremi__card{
+    display: flex;
+    width: 65%;
+    height: 500px;
+    background-color: red;
+}
+.sobremi__card__left{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sobremi__card__left__img{
+    width: auto;
+    height: 90%;
+}
+/* .sobremi{
     display: flex;
     justify-content: space-between;
     height: 500px;
@@ -52,7 +78,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    background-color: rgb(252, 115, 115);
 }
 .sobremi__der{
     background-color: greenyellow;
@@ -76,12 +102,12 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-.sobremi__izq__iconos__icono{
+.sobremi__izq__iconos__icono i{
     color: white;
     background-color: black;
     padding: 10px;
     margin-bottom: 5px;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
 .sobremi__izq__iconos__icono span{
@@ -92,4 +118,4 @@ body{
     text-transform: uppercase;
     color: white;
     text-decoration: none;
-}
+} */

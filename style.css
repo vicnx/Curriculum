@@ -3,7 +3,7 @@
     --theme-color: rgb(98, 204, 84);
 }
 body{
-    font-family: monospace;
+    font-family: "Open Sans";
     margin: unset;
     box-sizing: border-box;
     min-width: fit-content;
@@ -11,6 +11,7 @@ body{
 }
 /* HEADER */
 .header{
+    font-family: monospace;
     height: 80px;
     box-sizing: border-box;
     width: 100%;
@@ -64,7 +65,7 @@ body{
     border-radius: 15px;
     overflow: hidden;    
     margin-bottom: 100px;
-    min-width: 800px;
+    /* min-width: 800px; */
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -82,7 +83,7 @@ body{
     flex-direction: row;
 }
 .home__card__down{
-    min-width: 800px;
+    /* min-width: 800px; */
     height: 90px;
     background-color: var(--theme-color);
     width: 100%;
@@ -95,7 +96,6 @@ body{
     background-color: rgb(0, 0, 0);
 }
 .home__card__up__right{
-    font-family: "Open Sans";
     width: 60%;
     box-sizing: border-box;
     margin: 50px;
@@ -168,23 +168,39 @@ body{
     height: 100vh;
 }
 .conocimientos{
-    display: flex;
-    flex-direction: column;
     background-color: var(--theme-color);
-    height: 200px;
+    padding-top: 10px;
+}
+.conocimientos__header{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+.conocimientos__header__title{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+
 }
 .conocimientos__body{
-    height: 90%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 .conocimientos__body__logo{
+    margin: 20px;
+    opacity: 0.8;
     width: 80px;
-    filter: brightness(100%) drop-shadow(4px 4px 3px #00310b);
+    filter: brightness(100%) drop-shadow(4px 4px 3px #006917);
     transition: 0.7s;
 }
+.conocimientos__body__logo--angularjs{
+    width: 150px;
+}
+
 .conocimientos__body__logo:hover{
-    transform: scale(1.2);
+    opacity: 1;
+    transform: scale(1.8);
 }

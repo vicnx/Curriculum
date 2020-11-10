@@ -28,10 +28,10 @@
 <body>
     <header class="header">
         <nav class="header__menu">
+            <a class="header__menu__item" href="#home">Home</a>
             <a class="header__menu__item" href="#sobremi">Sobre mi</a>
-            <a class="header__menu__item" href="#conocimientos">Conocimientos</a>
-            <a class="header__menu__item" href="#experiencia">Experiencia</a>
-            <a class="header__menu__item" href="#competencias">Competencias</a>
+            <!-- <a class="header__menu__item" href="#experiencia">Experiencia</a>
+            <a class="header__menu__item" href="#competencias">Competencias</a> -->
             <a class="header__menu__item" href="#estudios">Formación</a>
             <a class="header__menu__item" href="#datosinteres">Datos de Interes</a>
         </nav>
@@ -40,94 +40,72 @@
         </section>
     </header>
     
-    <section class="sobremi" itemscope itemtype="http://schema.org/Person" id="#sobremi">
-        <div class="sobremi__card">
-            <section class="sobremi__card__up">
-                <div class="sobremi__card__up__left">
-                    <img class="sobremi__card__up__left__img" itemprop="image" src="img/perfil.jpg" alt="Foto perfil">
+    <section class="home" itemscope itemtype="http://schema.org/Person" id="#home">
+        <div class="home__card">
+            <section class="home__card__up">
+                <div class="home__card__up__left">
+                    <img class="home__card__up__left__img" itemprop="image" src="img/perfil.jpg" alt="Foto perfil">
                 </div>
-                <div class="sobremi__card__up__right">
-                    <H1 class="sobremi__card__up__right__name" itemprop="name">Vicente Andani Auñón</H1>
-                    <h2 class="sobremi__card__up__right__title">Web designer</h2>
-                    <hr class="sobremi__card__up__right__separador">
-                    <p class="sobremi__card__up__right__desc" itemprop="description">Soy una persona trabajadora, que se esfuerza para conseguir todas las metas que se proponga. Desde que conocí el mundo de la programación no he dejado de aprender y llenarme de conocimientos.</p>
-                    <div class="sobremi__card__up__right__info">
+                <div class="home__card__up__right">
+                    <H1 class="home__card__up__right__name" itemprop="name">Vicente Andani Auñón</H1>
+                    <h2 class="home__card__up__right__title">Web developer</h2>
+                    <hr class="home__card__up__right__separador">
+                    <p class="home__card__up__right__desc" itemprop="description">Soy una persona trabajadora, que se esfuerza para conseguir todas las metas que se proponga. Desde que conocí el mundo de la programación no he dejado de aprender y llenarme de conocimientos.</p>
+                    <div class="home__card__up__right__info">
                         <h2>Contactáme</h2>
-                        <a class="sobremi__card__up__right__info__icono sobremi__card__up__right__info__icono--email" itemprop="email" href="mailto:andanivicente@gmail.com"><i class="far fa-envelope"></i><span>andanivicente@gmail.com</span></a>
-                        <a class="sobremi__card__up__right__info__icono sobremi__card__up__right__info__icono--phone" itemprop="telephone" href="tel:+34680909465"><i class="fas fa-phone"></i><span>+34 680 909 465</span></a>
-                        <a class="sobremi__card__up__right__info__icono sobremi__card__up__right__info__icono--home" itemprop="homeLocation" href=""><i class="fas fa-home"></i><span>Avenida Almaig 40, Ontinyent - 46870</span></a>
+                        <a class="home__card__up__right__info__icono home__card__up__right__info__icono--email" itemprop="email" href="mailto:andanivicente@gmail.com"><i class="far fa-envelope"></i><span>andanivicente@gmail.com</span></a>
+                        <a class="home__card__up__right__info__icono home__card__up__right__info__icono--phone" itemprop="telephone" href="tel:+34680909465"><i class="fas fa-phone"></i><span>+34 680 909 465</span></a>
+                        <a class="home__card__up__right__info__icono home__card__up__right__info__icono--home" itemprop="homeLocation" href=""><i class="fas fa-home"></i><span>Avenida Almaig 40, Ontinyent - 46870</span></a>
                     </div>
                 </div>
             </section>
-            <section class="sobremi__card__down">
-                <a class="sobremi__card__down__icono sobremi__card__down__icono--github" itemprop="url" href="https://github.com/vicnx"><i class="fab fa-github"></i></a>
-                <a class="sobremi__card__down__icono sobremi__card__down__icono--linkedin" itemprop="url" href="https://www.linkedin.com/in/vicnx/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="sobremi__card__down__icono sobremi__card__down__icono--instagram" itemprop="url" href="https://www.instagram.com/xente57/"><i class="fab fa-instagram"></i></a>
-
-
+            <section class="home__card__down">
+                <a class="home__card__down__icono home__card__down__icono--github" itemprop="url" href="https://github.com/vicnx" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="home__card__down__icono home__card__down__icono--linkedin" itemprop="url" href="https://www.linkedin.com/in/vicnx/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="home__card__down__icono home__card__down__icono--instagram" itemprop="url" href="https://www.instagram.com/xente57/" target="_blank"><i class="fab fa-instagram"></i></a>
             </section>
         </div>
-        <div class="background">
-
-        </div>
     </section>
-    <hr>
-    <section itemscope itemtype="http://schema.org/ItemList" id="conocimientos">
-        <h2 itemprop="name">Conocimientos</h2>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://2.bp.blogspot.com/-wCv0pZqhWcg/UZcnKFLYBxI/AAAAAAAAABA/yvH7xYRk36E/s1600/square.png" alt="logo1" style="width:100px;">
-            <h3>Angular JS</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="logo1" style="width:100px;">
-            <h3>JavaScript</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://i.blogs.es/53044d/java/1366_521.jpg" alt="logo1" style="width:100px;">
-            <h3>Java</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://img2.freepng.es/20190610/gou/kisspng-microsoft-azure-sql-database-microsoft-azure-sql-d-postani-spletni-razvijalec-izberite-svojo-uno-5cfe7bd5b6e377.6992930615601817177491.jpg" alt="logo1" style="width:100px;">
-            <h3>SQL</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://logodix.com/logo/1960442.jpg" alt="logo1" style="width:100px;">
-            <h3>NOSQL</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" alt="logo1" style="width:100px;">
-            <h3>PHP</h3>
-        </article>
-        <article itemprop="itemListElement">
-            <img itemprop="image" src="https://blog.desdelinux.net/wp-content/uploads/2019/01/bash-logo.jpg.webp" alt="logo1" style="width:100px;">
-            <h3>BASH</h3>
-        </article>
+    <section id="sobremi" class="sobremi">
+        <!-- CONOCIMIENTOS -->
+        <section class="conocimientos" itemscope itemtype="http://schema.org/ItemList">
+            <section class="conocimientos__header">
+                <h2 itemprop="name">Conocimientos</h2>
+            </section>
+            <section class="conocimientos__body">
+                <img class="conocimientos__body__logo" itemprop="image" src="img/js.jpg" alt="javaScrpt">
+                <img class="conocimientos__body__logo" itemprop="image" src="img/php.png" alt="PHP OOP MVC" style="width:100px;">
+                <img class="conocimientos__body__logo" itemprop="image" src="https://img2.freepng.es/20190610/gou/kisspng-microsoft-azure-sql-database-microsoft-azure-sql-d-postani-spletni-razvijalec-izberite-svojo-uno-5cfe7bd5b6e377.6992930615601817177491.jpg" alt="logo1" style="width:100px;">
+                <img class="conocimientos__body__logo" itemprop="image" src="https://logodix.com/logo/1960442.jpg" alt="logo1" style="width:100px;">
+                <img class="conocimientos__body__logo" itemprop="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" alt="logo1" style="width:100px;">
+                <img class="conocimientos__body__logo"itemprop="image" src="https://blog.desdelinux.net/wp-content/uploads/2019/01/bash-logo.jpg.webp" alt="logo1" style="width:100px;">
+            </section>
+        </section>
+        <!-- EXPERIENCIA -->
+        <section id="experiencia"  itemscope itemtype="http://schema.org/Event/Job">
+            <h2>Experiencia Laboral</h2>
+            <article>
+                <img itemprop="image" src="https://www.emprendedores.es/wp-content/uploads/2014/09/app-informatica.png" alt="logo_empresa" style="width:100px;">
+                <h3 itemprop="name">APP INFORMATICA</h3><br>
+                <span>800 horas</span><br>
+                <span>FCT - FCT DUAL</span>
+                <p itemprop="description"> Realizando funciones propias de un tecnico informatico</p>
+            </article>
+            <article>
+                <img itemprop="image" src="https://media-exp1.licdn.com/dms/image/C560BAQHqae4pyqE3zw/company-logo_200_200/0?e=2159024400&v=beta&t=-p6O5fN57OYfOD19FaR9v_kcFvPvKE_bKKUmWL_e0DE" alt="logo_empresa" style="width:100px;">
+                <h3 itemprop="name">Innovaciones textiles pla</h3><br>
+                <span>264 horas</span>
+                <p itemprop="description">Trabajando como programdor de php y js</p>
+            </article>
+        </section>
+        <!-- COMPETENCIAS -->
+        <section id="competencias">
+            <h2>Competencias</h3>
+            <span>Trabajo en equipo</span><br>
+            <span>Capacidad resolutiva</span><br>
+            <span>Aprendizaje rápido</span>
+        </section>
     </section>
-    <hr>
-    <section id="experiencia"  itemscope itemtype="http://schema.org/Event/Job">
-        <h2>Experiencia Laboral</h2>
-        <article>
-            <img itemprop="image" src="https://www.emprendedores.es/wp-content/uploads/2014/09/app-informatica.png" alt="logo_empresa" style="width:100px;">
-            <h3 itemprop="name">APP INFORMATICA</h3><br>
-            <span>800 horas</span><br>
-            <span>FCT - FCT DUAL</span>
-            <p itemprop="description"> Realizando funciones propias de un tecnico informatico</p>
-        </article>
-        <article>
-            <img itemprop="image" src="https://media-exp1.licdn.com/dms/image/C560BAQHqae4pyqE3zw/company-logo_200_200/0?e=2159024400&v=beta&t=-p6O5fN57OYfOD19FaR9v_kcFvPvKE_bKKUmWL_e0DE" alt="logo_empresa" style="width:100px;">
-            <h3 itemprop="name">Innovaciones textiles pla</h3><br>
-            <span>264 horas</span>
-            <p itemprop="description">Trabajando como programdor de php y js</p>
-        </article>
-    </section>
-    <hr>
-    <section id="competencias">
-        <h2>Competencias</h3>
-        <span>Trabajo en equipo</span><br>
-        <span>Capacidad resolutiva</span><br>
-        <span>Aprendizaje rápido</span>
-    </section>
-    <hr>
     <section id="estudios">
         <h2>Educación/Formaciones complementarias</h3>
         <article itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">

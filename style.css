@@ -1,4 +1,7 @@
 
+:root {
+    --theme-color: rgb(98, 204, 84);
+}
 body{
     font-family: monospace;
     margin: unset;
@@ -8,7 +11,6 @@ body{
 }
 /* HEADER */
 .header{
-    
     height: 80px;
     box-sizing: border-box;
     width: 100%;
@@ -36,15 +38,18 @@ body{
 	text-decoration: none;
 	display: inline-block;
 	padding: 16px;
-	color: #f9f9f9;
+    color: #f9f9f9;
+    transition: 0.2s;
 	/* font-size: 15px; */
 }
 .header__menu__item:hover{
-    background-color: rgba(238, 130, 238, 0.479);
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-color);
 }
 
-/* SOBRE MI */
-.sobremi{
+/* HOME */
+.home{
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -54,7 +59,7 @@ body{
     background-position: 50% 100%;
     background: linear-gradient(180deg, #ffc0cb00 60%, #ffffff 40%),url(img/background1.jpg);
 }
-.sobremi__card{
+.home__card{
     box-sizing: border-box;
     border-radius: 15px;
     overflow: hidden;    
@@ -68,7 +73,7 @@ body{
 
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
-.sobremi__card__up{
+.home__card__up{
     box-sizing: border-box;
 
     width: 100%;
@@ -76,19 +81,20 @@ body{
     display: flex;
     flex-direction: row;
 }
-.sobremi__card__down{
+.home__card__down{
     min-width: 800px;
     height: 90px;
-    background-color: rgb(98, 204, 84);
+    background-color: var(--theme-color);
     width: 100%;
 }
-.sobremi__card__up__left{
+.home__card__up__left{
+    overflow: hidden;
     width: 40%;
     height: 100%;
     display: flex;
     background-color: rgb(0, 0, 0);
 }
-.sobremi__card__up__right{
+.home__card__up__right{
     font-family: "Open Sans";
     width: 60%;
     box-sizing: border-box;
@@ -96,50 +102,54 @@ body{
     display: flex;
     flex-direction: column;
 }
-.sobremi__card__up__left__img{
+.home__card__up__left__img{
  width: 100%;
  object-fit: cover;
+ transition: transform 0.5s ease-in-out; 
 
 }
-.sobremi__card__up__right__name{
+.home__card__up__left__img:hover{
+    transform :scale(1.05);
+}
+.home__card__up__right__name{
     font-size: 30px;
 }
-.sobremi__card__up__right__title{
+.home__card__up__right__title{
     margin-left: 5px;
     margin-top: -32px;
     font-size: 16px;
     font-weight: 100;
 }
-.sobremi__card__up__right__separador{
+.home__card__up__right__separador{
     box-sizing: border-box;
     width: 100%;
-    border: 5px solid green;
+    border: 5px solid var(--theme-color);
     border-radius: 5px;
 }
-.sobremi__card__up__right__desc{
+.home__card__up__right__desc{
     font-size: 15px;
 }
-.sobremi__card__up__right__info{
+.home__card__up__right__info{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
 
-.sobremi__card__up__right__info__icono{
+.home__card__up__right__info__icono{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.sobremi__card__up__right__info__icono span{
+.home__card__up__right__info__icono span{
     margin-left: 10px;
 }
-.sobremi__card__down{
+.home__card__down{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.sobremi__card__down__icono{
+.home__card__down__icono{
     padding: 10px;
     color: white;
     font-size: 40px;
@@ -147,6 +157,34 @@ body{
     transition: transition, background-color 0.25s linear 0s;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
 }
-.sobremi__card__down__icono:hover{
+.home__card__down__icono:hover{
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* SOBREMI */
+.sobremi{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+.conocimientos{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--theme-color);
+    height: 200px;
+}
+.conocimientos__body{
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.conocimientos__body__logo{
+    width: 80px;
+    filter: brightness(100%) drop-shadow(4px 4px 3px #00310b);
+    transition: 0.7s;
+}
+.conocimientos__body__logo:hover{
+    transform: scale(1.2);
 }

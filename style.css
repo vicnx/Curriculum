@@ -236,6 +236,18 @@ body{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     box-sizing: border-box;
     border-radius: 15px;
-    overflow: hidden;    
+    overflow: hidden;   
+    border: 1px solid black; 
+    display: flex;
+    flex-direction: row;
 }
-
+.experiencia__body__article__left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 40%;
+}
+.experiencia__body__article__left img{
+    width: 200px;
+}

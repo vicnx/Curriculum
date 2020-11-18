@@ -25,6 +25,7 @@
         content="https://lh3.googleusercontent.com/ogw/ADGmqu8PHvpJsrMROrEQd_26NFumw81d7NbdtPcjT9nN=s83-c-mo" />
 
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>Curriculum Vitae Vicente Andani</title>
@@ -34,11 +35,20 @@
     <header class="header">
         <nav class="header__menu">
             <a class="header__menu__item" href="#home">Home</a>
-            <a class="header__menu__item" href="#sobremi">Sobre mi</a>
-            <!-- <a class="header__menu__item" href="#experiencia">Experiencia</a>
-            <a class="header__menu__item" href="#competencias">Competencias</a> -->
+            <a class="header__menu__item" href="#conocimientos">Conocimientos</a>
+            <a class="header__menu__item" href="#experiencia">Experiencia</a>
             <a class="header__menu__item" href="#estudios">Formación</a>
             <a class="header__menu__item" href="#contacto">Contacto</a>
+            <div class="header__menu__dropdown">
+                <a id="change_color_theme" class="header__menu__dropdown__parent"><i class="fas fa-circle circle-theme"></i> Cambiar Tema <i class="fas fa-circle circle-theme"></i></a>
+                <div id="theme_changer" class="header__menu__dropdown__options">
+                    <a id="theme_red" class="header__menu__dropdown__options__option"><span>Rojo</span><i class="fas fa-circle circle-red"></i></a>
+                    <a id="theme_blue" class="header__menu__dropdown__options__option"><span>Azul</span><i class="fas fa-circle circle-blue"></i></a>
+                    <a id="theme_green" class="header__menu__dropdown__options__option"><span>Verde</span><i class="fas fa-circle circle-green"></i></a>
+                    <a id="theme_yellow" class="header__menu__dropdown__options__option"><span>Amarillo</span><i class="fas fa-circle circle-yellow"></i></a>
+                </div>
+            </div>
+
         </nav>
         <section class="header__name">
             <span>Vicente</span>
@@ -84,7 +94,7 @@
     </section>
     <section id="sobremi" class="sobremi">
         <!-- CONOCIMIENTOS -->
-        <section class="conocimientos" itemscope itemtype="http://schema.org/ItemList">
+        <section id="conocimientos" class="conocimientos" itemscope itemtype="http://schema.org/ItemList">
             <section class="conocimientos__header">
                 <h2 class="conocimientos__header__title" itemprop="name">Conocimientos</h2>
             </section>
@@ -218,58 +228,33 @@
         <div class="contact__form">
             <form autocomplete="off" name="contact" class="contact__form__form">
                 <div class="contact__form__form__group">
-                    <label>Name</label>
-                    <input type="text" name="name" id="name" required="">
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label>Nombre</label>
                 </div>
                 <div class="contact__form__form__group">
+                    <input type="email" name="email" id="email" required>
                     <label>Email</label>
-                    <input type="email" name="email" id="email" required="">
                 </div>
                 <div class="contact__form__form__group">
-                    <label>Subject</label>
-                    <input type="text" name="subject" id="subject" required="">
+                    <input type="text" name="asunto" id="asunto" required>
+                    <label>Asunto</label>
                 </div>
                     
-                    <div class="contact__form__form__group">
-                        <label>Message</label>
-                        <textarea name="message" id="message" rows="5" required=""></textarea>
-                    
+                <div class="contact__form__form__group">
+                    <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+                    <label>Mensaje</label>
                 </div>
-                <button class="contact__form__form__group__button" type="submit">Send</button>
+                <button class="contact__form__form__group__button" type="submit">Enviar</button>
                 <input class="contact__form__form__group__button" type="reset" value="Clear">
             </form>
         </div>
 
     </section>
-    <!-- COMPETENCIAS Y INTERESES -->
-    <!-- <section class="comp-int">
-        <div class="comp-int__competencias">
-            <section class="comp-int__competencias" id="competencias">
-                <section class="comp-int__competencias__header">
-                    <h2>Competencias</h2>
-                </section>
-                <section class="comp-int__competencias__body">
-                    <span><i class="fas fa-check"></i> Trabajo en equipo</span><br>
-                    <span><i class="fas fa-check"></i> Capacidad resolutiva</span><br>
-                    <span><i class="fas fa-check"></i> Aprendizaje rápido</span>
-                </section>
-            </section>
-        </div>
-        <hr class="com-int__separador">
-        <div class="comp-int__intereses">
-            <section class="comp-int__intereses__header" id="datosinteres">
-                <h2>Otros datos de interes</h2>
-                <section class="comp-int__intereses__body">
-                    <span>Carnet de conducción AM,A1,A2 y B</span>
-                    <span>Vehículo propio.</span>
-                </section>
-            </section>
-        </div>
-
-    </section> -->
-    <!-- <footer>
-        <span>Vicente Andani</span>
-    </footer> -->
+    <footer class="footer">
+        <p class="footer__text--copy">Copyright &copy; 2020 All Rights Reserved by 
+            <a class="footer__text--name" href="https://github.com/vicnx">vicnx</a>
+        </p>
+    </footer>
 </body>
 
 </html>

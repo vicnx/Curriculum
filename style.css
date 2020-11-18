@@ -4,8 +4,9 @@
     --theme-color-shadows: rgb(48, 117, 114);
     --theme-color-clear: rgb(196, 247, 244);
     --theme-color-dark: rgb(0, 107, 100);
-    --dark: #2a2d33;
+    --dark: rgb(39, 39, 39);
     --clean: white;
+    --theme-color-hover: rgb(77, 185, 180);
 }
 body{
     font-family: "Open Sans";
@@ -22,7 +23,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(39, 39, 39);
+    background-color: var(--dark);
 }
 .header__name{
     margin-right: 10px;
@@ -46,6 +47,7 @@ body{
 	padding: 16px;
     color: #f9f9f9;
     transition: 0.2s;
+    cursor: pointer;
 	/* font-size: 15px; */
 }
 .header__menu__item:hover{
@@ -53,6 +55,87 @@ body{
     color: black;
     background-color: var(--theme-color);
 }
+/* DROPDOWN */
+.header__menu__dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.header__menu__dropdown__parent{
+    text-decoration: none;
+	display: inline-block;
+	padding: 16px;
+    animation:theme_changer 4s infinite;
+    animation:theme_changer 4s infinite;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.header__menu__dropdown__parent:hover{
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-color);
+}
+/* DROPDOWN CON CSS PURO HOVER (con js esta añadido el click por si quieres dejar el dropdown abierto, pero con el hover seria suficiente)*/
+.header__menu__dropdown__parent:hover + .header__menu__dropdown__options{
+    display: block;
+}
+.header__menu__dropdown__options:hover{
+    display: block;
+}
+/* FIN DROPDOWN CON CSS PURO HOVER */
+.header__menu__dropdown__options{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 174px;
+    overflow: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 1;
+    cursor: pointer;
+}
+.header__menu__dropdown__options__option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--clean);
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: var(--dark);
+    cursor: pointer;
+}
+.header__menu__dropdown__options__option:hover{
+    background-color: var(--theme-color);
+    color: var(--dark);
+    font-weight: bold;
+}
+.show {
+    display: block;
+}
+.circle-theme{
+    /* color: var(--theme-color) !important; */
+    animation:theme_changer 4s infinite;
+    animation:theme_changer 4s infinite;
+}
+@keyframes theme_changer {
+    0% {color:rgb(204, 84, 84)}
+    25% {color:rgb(196, 204, 84)}
+    50% {color:rgb(84, 204, 84)}
+    75% {color:rgb(84, 204, 198)}
+    100% {color:rgb(204, 84, 84)}
+}
+.circle-red{
+    color: rgb(204, 84, 84);
+}
+.circle-blue{
+    color: rgb(84, 204, 198);
+}
+.circle-green{
+    color: rgb(84, 204, 84);
+}
+.circle-yellow{
+    color: rgb(196, 204, 84);
+}
+/* FIN DROPDOWN */
 
 /* HOME */
 .home{
@@ -193,14 +276,15 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 0px 0px 30px 0px;
 }
 .conocimientos__body__logo{
-    margin: 20px;
+    margin: 20px 90px 20px 90px;
     opacity: 0.8;
     width: 80px;
     filter: brightness(100%) drop-shadow(4px 4px 3px var(--theme-color-shadows));
-    transition: 0.7s;
+    transition: 0.4s;
 }
 .conocimientos__body__logo--angularjs{
     width: 150px;
@@ -208,7 +292,7 @@ body{
 
 .conocimientos__body__logo:hover{
     opacity: 1;
-    transform: scale(1.8);
+    transform: scale(1.3);
 }
 
 /* EXPERIENCIA */
@@ -242,8 +326,10 @@ body{
     box-sizing: content-box;
     padding: 20px;
     border-radius: 25px;
+    transition: 0.4s;
 }
 .exp-edu__experiencia__body__article:hover{
+
     cursor: pointer;
     background-color: var(--theme-color-clear);
 } 
@@ -310,6 +396,7 @@ body{
     box-sizing: content-box;
     padding: 20px;
     border-radius: 25px;
+    transition: 0.4s;
 }
 .exp-edu__educacion__body__article__left{
     width: 30%;
@@ -375,6 +462,7 @@ body{
     justify-content: center;
     background-blend-mode: multiply;
     background-color: var(--dark);
+    padding-top: 20px;
     /* background-image: url(img/background_icon.png); */
 }
 .contacto__titulo{
@@ -408,10 +496,13 @@ body{
     width: 400px;
     max-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
-    color: var(--theme-color);
+}
+.contact__form__form__group label{
     font-weight: bolder;
+    color: var(--clean);
+    transition: 0.4s;
 }
 .contact__form__form__group input,.contact__form__form__group textarea {
     width: 100%;
@@ -420,74 +511,77 @@ body{
     background-color: transparent;
     border: 0;
     margin-top: 10px;
-    border-bottom: 3px solid var(--theme-color);
+    border-bottom: 3px solid var(--clean);
+    color: var(--clean);
+    transition: 0.4s;
 }
 .contact__form__form__group__button{
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-hover);
     border: 2px solid var(--theme-color-dark);
     border-radius: 2px;
-    box-sizing: border-box;
     color: var(--dark);
     font-weight: bolder;
     cursor: pointer;
     font-size: 16px;
+    line-height: 16px;
     padding: 15px 0;
     margin-top: 15px;
     width: 100%;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+:focus{
+    outline: none;
 }
 .contact__form__form__group input:focus,.contact__form__form__group textarea:focus {
-    outline: transparent;
-    border-left: 3px solid var(--theme-color-dark);
-    border-bottom: 3px solid var(--theme-color-dark);
+    border-bottom: 3px solid var(--theme-color);
 }
-/* cop INT */
-/* .comp-int{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    height: 300px;
+.contact__form__form__group input:focus ~ label{
+    color: var(--theme-color);
+}
+.contact__form__form__group textarea:focus ~ label{
+    color: var(--theme-color);
+}
+.contact__form__form__group__button:hover{
+    transition: 0.3s;
+    font-size: 25px;
     background-color: var(--theme-color);
 }
-.com-int__separador{
-    align-self: center;
-    margin-top: 20px;
-    border-radius: 5px;
-    border:none;
-    border-left:5px solid white;
-    height:75%;
-    width:1px; 
-} */
-/* COMPETENCIAS */
-/* .comp-int__competencias{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 100%;
 
-}
-.comp-int__competencias__header{
-    margin-top: 10px;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 0;
-    color: rgb(255, 255, 255);
-}
-.comp-int__competencias__body{
+.footer{
+    background-color: var(--theme-color);
+    height: 50px;
+    line-height: 16px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    font-weight: bold;
-} */
-
-/* INTERESES */
-/* .comp-int__intereses{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    height: 100%;
-} */
+}
+.footer__text--copy{
+    color: var(--dark);
+}
+.footer__text--name{
+    text-decoration: none;
+    color: var(--dark);
+    transition: 0.4s;
+}
+.footer__text--name:hover{
+    
+    font-size: 20px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--dark); 
+    background-color: var(--dark);
+    /* border-radius: 5px; */
+}
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color); 
+    /* border-radius: 10px; */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color);    
+}

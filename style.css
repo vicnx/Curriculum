@@ -1,5 +1,5 @@
-
-:root {
+/* ESTAS VARIABLES SE CAMBIAN CON LA FUNCION CHANGE_THEME EN JS */
+:root { 
     --theme-color: rgb(84, 204, 198);
     --theme-color-shadows: rgb(48, 117, 114);
     --theme-color-clear: rgb(196, 247, 244);
@@ -8,6 +8,7 @@
     --clean: white;
     --theme-color-hover: rgb(77, 185, 180);
 }
+/* FIN VARIABLES GLOBALES */
 body{
     font-family: "Open Sans";
     margin: unset;
@@ -75,7 +76,7 @@ body{
     color: black;
     background-color: var(--theme-color);
 }
-/* DROPDOWN CON CSS PURO HOVER (con js esta añadido el click por si quieres dejar el dropdown abierto, pero con el hover seria suficiente)*/
+/* DROPDOWN CON CSS PURO HOVER (lo unico realizado con js es el click de los elementos de dentro)*/
 .header__menu__dropdown__parent:hover + .header__menu__dropdown__options{
     display: block;
 }

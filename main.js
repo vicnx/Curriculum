@@ -48,12 +48,5 @@ function color_theme_changer(){
 }
 
 docReady(function() {
-    document.getElementById("change_color_theme").addEventListener("click", function(){
-        //Esto MANTIENE el dropdown abierto
-        document.getElementById("theme_changer").classList.toggle("show");
-    });
-
-    color_theme_changer()
-
-
+    color_theme_changer();
 });

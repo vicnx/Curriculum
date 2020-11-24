@@ -1,0 +1,185 @@
+/* ESTAS VARIABLES SE CAMBIAN CON LA FUNCION CHANGE_THEME EN JS */
+:root { 
+    --theme-color: rgb(84, 204, 198);
+    --theme-color-shadows: rgb(48, 117, 114);
+    --theme-color-clear: rgb(196, 247, 244);
+    --theme-color-dark: rgb(0, 107, 100);
+    --dark: rgb(39, 39, 39);
+    --clean: white;
+    --theme-color-hover: rgb(77, 185, 180);
+}
+/* FIN VARIABLES GLOBALES */
+
+body{
+    font-family: "Open Sans";
+    margin: unset;
+    box-sizing: border-box;
+    min-width: fit-content;
+
+}
+:focus{
+    outline: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--dark); 
+    background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color);    
+}
+
+/* HEADER */
+.header{
+    font-family: monospace;
+    height: 80px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark);
+    position:fixed;
+    z-index: 2;
+}
+.header__name{
+    margin-right: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+}
+.header__menu{
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header__menu__item{
+	text-decoration: none;
+	display: inline-block;
+	padding: 16px;
+    color: #f9f9f9;
+    transition: 0.2s;
+    cursor: pointer;
+	/* font-size: 15px; */
+}
+.header__menu__item:hover{
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-color);
+}
+/* DROPDOWN */
+.header__menu__dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.header__menu__dropdown__parent{
+    text-decoration: none;
+	display: inline-block;
+	padding: 16px;
+    animation:theme_changer 4s infinite;
+    animation:theme_changer 4s infinite;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.header__menu__dropdown__parent:hover{
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-color);
+}
+/* DROPDOWN CON CSS PURO HOVER (lo unico realizado con js es el click de los elementos de dentro)*/
+.header__menu__dropdown__parent:hover + .header__menu__dropdown__options{
+    display: block;
+}
+.header__menu__dropdown__options:hover{
+    display: block;
+}
+/* FIN DROPDOWN CON CSS PURO HOVER */
+.header__menu__dropdown__options{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 174px;
+    overflow: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 1;
+    cursor: pointer;
+}
+.header__menu__dropdown__options__option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--clean);
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: var(--dark);
+    cursor: pointer;
+}
+.header__menu__dropdown__options__option:hover{
+    background-color: var(--theme-color);
+    color: var(--dark);
+    font-weight: bold;
+}
+.show {
+    display: block;
+}
+.circle-theme{
+    /* color: var(--theme-color) !important; */
+    animation:theme_changer 4s infinite;
+    animation:theme_changer 4s infinite;
+}
+@keyframes theme_changer {
+    0% {color:rgb(204, 84, 84)}
+    25% {color:rgb(196, 204, 84)}
+    50% {color:rgb(84, 204, 84)}
+    75% {color:rgb(84, 204, 198)}
+    100% {color:rgb(204, 84, 84)}
+}
+.circle-red{
+    color: rgb(204, 84, 84);
+}
+.circle-blue{
+    color: rgb(84, 204, 198);
+}
+.circle-green{
+    color: rgb(84, 204, 84);
+}
+.circle-yellow{
+    color: rgb(196, 204, 84);
+}
+/* FIN DROPDOWN */
+
+
+/* FOOTER */
+.footer{
+    background-color: var(--theme-color);
+    height: 50px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__text--copy{
+    color: var(--dark);
+}
+.footer__text--name{
+    text-decoration: none;
+    color: var(--dark);
+    transition: 0.4s;
+}
+.footer__text--name:hover{
+    
+    font-size: 20px;
+}
+/* FIN FOOTER */

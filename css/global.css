@@ -9,7 +9,9 @@
     --theme-color-hover: rgb(77, 185, 180);
 }
 /* FIN VARIABLES GLOBALES */
-
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Open Sans";
     margin: unset;
